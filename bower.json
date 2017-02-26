@@ -1,0 +1,27 @@
+{
+  "name": "gamevue",
+  "authors": [
+    "John Olawale <mojoblanco@gmail.com>"
+  ],
+  "description": "A simple game using VueJs",
+  "main": "index.html",
+  "keywords": [
+    "vue",
+    "vuejs",
+    "game"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "vue": "^2.1.10"
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VueJs Game</title>
+
+    <link rel="stylesheet" href="assets/lib/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <script src="assets/lib/vue/dist/vue.js" charset="utf-8"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+
+            <section class="row">
+                <div class="col-sm-6">
+                    <h1>You</h1>
+                    <div class="health-bar" style="background-color: #ccc;" :style="{width: playerHealth + '%'}">
+                        {{ playerHealth }}
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <h1>Monster</h1>
+                    <div class="health-bar" style="background-color: #aaa;" :style="{width: monsterHealth + '%'}">
+                        {{ monsterHealth }}
+                    </div>
+                </div>
+            </section>
+
+            <section class="row controls" v-if="!gameIsRunning">
+                <div class="col-sm-12">
+                    <button class="btn btn-default" @click="startGame">Start New Game</button>
+                </div>
+            </section>
+
+            <section class="row controls" v-else>
+                <div class="col-sm-12">
+                    <button class="btn btn-default" @click="attack">Attack</button>
+                    <button class="btn btn-default" @click="specialAttack">Special Attack</button>
+                    <button class="btn btn-default" @click="heal">Heal</button>
+                    <button class="btn btn-default" @click="giveUp">Give Up</button>
+                </div>
+            </section>
+
+            <section class="row log" v-if="turns.length > 0">
+                <div class="col-sm-12">
+                    <ul>
+                        <li v-for="turn in turns">
+                            {{ turn.text }}
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="assets/lib/jquery/dist/jquery.js" charset="utf-8"></script>
+    <script src="assets/lib/bootstrap/dist/js/bootstrap.js" charset="utf-8"></script>
+    <script src="assets/js/app.js" charset="utf-8"></script>
+</body>
+</html>
