@@ -4,6 +4,7 @@ A simple game using VueJs framework
 
 ## Installation
 __NOTE: Make sure you have bower installed on your system__
+
 1. Open command prompt or terminal
 2. Clone the repp by running ```git clone https://github.com/mojoblanco/gamevue.git```
 3. Enter the project folder
