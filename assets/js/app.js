@@ -29,6 +29,8 @@ new Vue({
         },
         giveUp: function(){
             this.gameIsRunning = false;
+            this.turns = [];
+            this.resetHealth();
         },
         playerAttack: function(min, max){
             var damage = this.calcDamage(min, max);
@@ -72,6 +74,10 @@ new Vue({
                 return true;
             }
             return false;
+        },
+        resetHealth: function(){
+            this.playerHealth = 100;
+            this.monsterHealth = 100;
         }
     }
 });

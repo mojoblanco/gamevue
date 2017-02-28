@@ -1,0 +1,38 @@
+body{
+    margin-top: 20px;
+}
+
+h1{
+    font-size: 1.8em;
+}
+
+h2{
+    font-size: 1.6em;
+}
+
+@media (min-width:40.063em) {
+    #app > .container{
+        width: 500px;
+    }
+}
+
+#app > .container{
+    background: #666;
+}
+
+section.row,
+#footer{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.log{
+    list-style: none;
+    padding: 0;
+}
+
+.alert{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
